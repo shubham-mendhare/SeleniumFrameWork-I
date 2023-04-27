@@ -8,12 +8,22 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">23,510</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">LoginModule</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">22,898</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">smerpBase.Base</td><td><a href="#m0">Login</a></td><td rowspan="1">1682593645207</td><td rowspan="1">2512</td></tr><tr class="passedeven"><td><a href="#m1">LoginValidation</a></td><td rowspan="1">1682593656195</td><td rowspan="1">2204</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginModule &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">smerpTest.LoginPageTest</td><td><a href="#m0">LoginValidation</a></td><td rowspan="1">1682596080673</td><td rowspan="1">1667</td></tr><tr><th colspan="4">LoginModule &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">smerpTest.LoginPageTest</td><td><a href="#m1">Login</a></td><td rowspan="1">1682596070043</td><td rowspan="1">2575</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">smerpBase.Base#Login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">smerpBase.Base#LoginValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>LoginModule</h2><h3 id="m0">smerpTest.LoginPageTest#LoginValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:97)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:77)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at smerpUtility.Utility.waitVisibilityEle(Utility.java:29)
+	at smerpTest.LoginPageTest.LoginValidation(LoginPageTest.java:58)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">smerpTest.LoginPageTest#Login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

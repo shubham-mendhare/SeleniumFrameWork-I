@@ -25,22 +25,22 @@ public class LoginPageObj extends Base {
 	}
 	
 	@FindBy(id="userEmail")
-	WebElement username;
+	public WebElement username;
 	
 	@FindBy(id="userPassword")
-	WebElement password;
+	public WebElement password;
 	
 	@FindBy(id="login")
-	WebElement loginBtn;
+	public WebElement loginBtn;
 	
 	@FindBy(xpath="//div[contains(text(),'*Email is required')]")
-	WebElement errUsername;
+	public WebElement errUsername;
 	
 	@FindBy(xpath="//div[contains(text(),'*Password is required')]")
-	WebElement errPassword;
+	public WebElement errPassword;
 	
 	@FindBy(css = "div[aria-label=\"Incorrect email or password.\"]")
-	WebElement IncorrectPassOrUsername;
+	public WebElement IncorrectPassOrUsername;
 	
 	
 	

@@ -25,7 +25,7 @@ public class Base
 	
 	public Properties prop;
 	public static WebDriver driver;
-	public LoginPageObj lgn ;
+	public  LoginPageObj lgn ;
 	public Utility ult;
 	
 	protected Base() throws IOException{
@@ -66,19 +66,7 @@ public class Base
 		lgn = new LoginPageObj(driver);
 		
 	}
-	
-	@Test (dependsOnMethods = "Login")
-	public void LoginValidation() throws IOException, InterruptedException  {
-		lgn.loginValidation();
-	}
-	
-	@Test
-	public void Login() throws IOException, InterruptedException  {
-		
-		HomePageObj home = lgn.login();
-		Thread.sleep(2000);
-		Assert.assertEquals(home.HomePgTitle(), "https://rahulshettyacademy.com/client/dashboard/dash");
-	}
+
 	
 	@AfterMethod
 	public void teardown() {

@@ -1,37 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-27T16:37:15 IST" name="Default suite" finished-at="2023-04-27T16:37:39 IST" duration-ms="23510">
+  <suite started-at="2023-04-27T17:17:40 IST" name="Suite" finished-at="2023-04-27T17:18:03 IST" duration-ms="22898">
     <groups>
     </groups>
-    <test started-at="2023-04-27T16:37:15 IST" name="Default test" finished-at="2023-04-27T16:37:39 IST" duration-ms="23510">
-      <class name="smerpBase.Base">
-        <test-method is-config="true" signature="init()[pri:0, instance:smerpBase.Base@52af26ee]" started-at="2023-04-27T16:37:15 IST" name="init" finished-at="2023-04-27T16:37:25 IST" duration-ms="9405" status="PASS">
+    <test started-at="2023-04-27T17:17:40 IST" name="LoginModule" finished-at="2023-04-27T17:18:03 IST" duration-ms="22898">
+      <class name="smerpTest.LoginPageTest">
+        <test-method is-config="true" signature="init()[pri:0, instance:smerpTest.LoginPageTest@4f2b503c]" started-at="2023-04-27T17:17:40 IST" name="init" finished-at="2023-04-27T17:17:50 IST" duration-ms="9705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="Login()[pri:0, instance:smerpBase.Base@52af26ee]" started-at="2023-04-27T16:37:25 IST" name="Login" finished-at="2023-04-27T16:37:27 IST" duration-ms="2512" status="PASS">
+        <test-method signature="Login()[pri:0, instance:smerpTest.LoginPageTest@4f2b503c]" started-at="2023-04-27T17:17:50 IST" name="Login" finished-at="2023-04-27T17:17:52 IST" duration-ms="2575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:smerpBase.Base@52af26ee]" started-at="2023-04-27T16:37:27 IST" name="teardown" finished-at="2023-04-27T16:37:28 IST" duration-ms="979" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:smerpTest.LoginPageTest@4f2b503c]" started-at="2023-04-27T17:17:52 IST" name="teardown" finished-at="2023-04-27T17:17:53 IST" duration-ms="919" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="init()[pri:0, instance:smerpBase.Base@52af26ee]" started-at="2023-04-27T16:37:28 IST" name="init" finished-at="2023-04-27T16:37:36 IST" duration-ms="7486" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:smerpTest.LoginPageTest@4f2b503c]" started-at="2023-04-27T17:17:53 IST" name="init" finished-at="2023-04-27T17:18:00 IST" duration-ms="7128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="LoginValidation()[pri:0, instance:smerpBase.Base@52af26ee]" started-at="2023-04-27T16:37:36 IST" name="LoginValidation" finished-at="2023-04-27T16:37:38 IST" depends-on-methods="smerpBase.Base.Login" duration-ms="2204" status="PASS">
+        <test-method signature="LoginValidation()[pri:0, instance:smerpTest.LoginPageTest@4f2b503c]" started-at="2023-04-27T17:18:00 IST" name="LoginValidation" finished-at="2023-04-27T17:18:02 IST" depends-on-methods="smerpTest.LoginPageTest.Login" duration-ms="1667" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Input must be set]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Input must be set
+at org.openqa.selenium.internal.Require.nonNull(Require.java:59)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:97)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:77)
+at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:46)
+at smerpUtility.Utility.waitVisibilityEle(Utility.java:29)
+at smerpTest.LoginPageTest.LoginValidation(LoginPageTest.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginValidation -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:smerpBase.Base@52af26ee]" started-at="2023-04-27T16:37:38 IST" name="teardown" finished-at="2023-04-27T16:37:39 IST" duration-ms="878" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:smerpTest.LoginPageTest@4f2b503c]" started-at="2023-04-27T17:18:02 IST" name="teardown" finished-at="2023-04-27T17:18:03 IST" duration-ms="845" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- smerpBase.Base -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- smerpTest.LoginPageTest -->
+    </test> <!-- LoginModule -->
+  </suite> <!-- Suite -->
 </testng-results>
